@@ -26,4 +26,4 @@ branding:
   color: 'orange'
 runs:
   using: 'docker'
-  image: 'docker://eunts/go-mod-details:v1.0.0'
+  image: 'docker://eunts/go-mod-details:v1.0.1'
