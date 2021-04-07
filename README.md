@@ -4,11 +4,11 @@ An action that returns details about a `go.mod` file.
 
 ## Inputs
 ### `modfile`
-Path to the go.mod file that should be parsed (*optional*)
+Path to the `go.mod` file that should be parsed (*optional*)
 
 ## Outputs
 ### `modfile`
-Path to the go.mod file that was parsed
+Path to the `go.mod` file that was parsed
 
 ### `go_version`
 The go version that is defined in the `go.mod` file
