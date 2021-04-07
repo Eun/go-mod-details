@@ -38,3 +38,6 @@ dockers:
       - "--label=org.opencontainers.image.version={{ .Version }}"
       - "--build-arg=BINARY=go-mod-details"
       - "--platform=linux/arm64"
+release:
+  # do not release to github
+  skip: true

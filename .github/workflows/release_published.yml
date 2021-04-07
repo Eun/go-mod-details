@@ -20,7 +20,7 @@ jobs:
         name: Login to Docker Registry
         run: |
           echo "${{ secrets.DOCKER_TOKEN }}" | \
-          docker login docker.pkg.github.com -u eunts --password-stdin
+          docker login -u eunts --password-stdin
       -
         name: GoReleaser
         uses: goreleaser/goreleaser-action@v1
