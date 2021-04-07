@@ -1,6 +1,11 @@
 builds:
   -
-    skip: true
+    env:
+      - CGO_ENABLED=0
+    goos:
+      - linux
+    goarch:
+      - amd64
 dockers:
   -
     # GOOS of the built binaries/packages that should be used.
