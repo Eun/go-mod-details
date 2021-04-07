@@ -1,0 +1,44 @@
+builds:
+  -
+    env:
+      - CGO_ENABLED=0
+    goos:
+      - linux
+    goarch:
+      - amd64
+dockers:
+  -
+    # GOOS of the built binaries/packages that should be used.
+    goos: "linux"
+
+    # GOARCH of the built binaries/packages that should be used.
+    goarch: "amd64"
+
+    # GOARM of the built binaries/packages that should be used.
+    goarm: ''
+
+    # IDs to filter the binaries/packages.
+    ids:
+      - "go-mod-details"
+
+    image_templates:
+      - "eunts/go-mod-details:{{ .Tag }}"
+      - "eunts/go-mod-details:v{{ .Major }}"
+      - "eunts/go-mod-details:v{{ .Major }}.{{ .Minor }}"
+
+    skip_push: false
+    dockerfile: ".github/Dockerfile"
+    use_buildx: true
+
+    # Template of the docker build flags.
+    build_flag_templates:
+      - "--pull"
+      - "--label=org.opencontainers.image.created={{ .Date }}"
+      - "--label=org.opencontainers.image.title={{ .ProjectName }}"
+      - "--label=org.opencontainers.image.revision={{ .FullCommit }}"
+      - "--label=org.opencontainers.image.version={{ .Version }}"
+      - "--build-arg=BINARY=go-mod-details"
+      - "--platform=linux/arm64"
+release:
+  # do not release to github
+  disable: true
