@@ -1,4 +1,4 @@
-FROM gcr.io/distroless/base
+FROM gcr.io/distroless/base-debian10
 ARG BINARY
-COPY $BINARY /
-CMD ["/$BINARY"]
+COPY $BINARY /app
+ENTRYPOINT ["/app"]

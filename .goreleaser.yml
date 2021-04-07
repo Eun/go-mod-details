@@ -31,5 +31,5 @@ dockers:
       - "--label=org.opencontainers.image.title={{ .ProjectName }}"
       - "--label=org.opencontainers.image.revision={{ .FullCommit }}"
       - "--label=org.opencontainers.image.version={{ .Version }}"
-      - "--build-arg=BINARY={{ .Binary }}"
+      - "--build-arg=BINARY=go-mod-details"
       - "--platform=linux/arm64"
