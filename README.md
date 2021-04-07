@@ -37,7 +37,7 @@ steps:
     uses: actions/checkout@v2
   -
     name: Get go.mod details
-    uses: Eun/go-mod-details:v1
+    uses: Eun/go-mod-details@v1
     id: go-mod-details
   -
     name: Install Go
