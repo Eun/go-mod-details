@@ -13,17 +13,9 @@ outputs:
     description: The go version that is defined in the go.mod file
   module:
     description: The module name defined in the go.mod file
-  require_json:
-    description: The required modules in json format
-  exclude_json:
-    description: The excluded modules in json format
-  replace_json:
-    description: The replaced modules in json format
-  retract_json:
-    description: The retracted statements in json format
 branding:
   icon: 'code'
   color: 'orange'
 runs:
-  using: 'docker'
-  image: 'docker://eunts/go-mod-details:v1.0.1'
+  using: 'node12'
+  image: 'index.js'

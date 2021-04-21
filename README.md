@@ -16,17 +16,6 @@ The go version that is defined in the `go.mod` file
 ### `module`
 The module name defined in the `go.mod` file
 
-### `require_json`
-The required modules in json format
-
-### `exclude_json`
-The excluded modules in json format
-
-### `replace_json`
-The replaced modules in json format
-
-### `retract_json`
-The retracted statements in json format
 
 
 ## Example
