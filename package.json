@@ -1,0 +1,23 @@
+{
+  "name": "go-mod-details",
+  "version": "1.0.0",
+  "description": "An action that returns details about a `go.mod` file",
+  "main": "index.js",
+  "dependencies": {
+    "@actions/core": "^1.2.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Eun/go-mod-details.git"
+  },
+  "author": "Eun",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Eun/go-mod-details/issues"
+  },
+  "homepage": "https://github.com/Eun/go-mod-details#readme"
+}
