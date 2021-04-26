@@ -32,7 +32,7 @@ steps:
     name: Install Go
     uses: actions/setup-go@v1
     with:
-      go-version: ${{ steps.get-mod-details.outputs.go_version }}
+      go-version: ${{ steps.go-mod-details.outputs.go_version }}
   -
     name: Test
     run: go test -v ./...
