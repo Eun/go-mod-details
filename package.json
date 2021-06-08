@@ -4,7 +4,7 @@
   "description": "An action that returns details about a `go.mod` file",
   "main": "index.js",
   "dependencies": {
-    "@actions/core": "^1.2.7"
+    "@actions/core": "^1.4.0"
   },
   "devDependencies": {},
   "scripts": {
