@@ -24,7 +24,7 @@ jobs:
         shell: bash
         run: |
           if [[ "${{ steps.go-mod-details.outputs.go_version }}" != "1.19" ]]; then
-            echo "expected `1.19', but got `${{ steps.go-mod-details.outputs.go_version }}'"
+            echo "expected '1.19', but got '${{ steps.go-mod-details.outputs.go_version }}'"
             exit 1
           fi
       -
@@ -32,7 +32,7 @@ jobs:
         shell: bash
         run: |
           if [[ "${{ steps.go-mod-details.outputs.module }}" != "main" ]]; then
-            echo "expected `main', but got `${{ steps.go-mod-details.outputs.module }}'"
+            echo "expected 'main', but got '${{ steps.go-mod-details.outputs.module }}'"
             exit 1
           fi
 
