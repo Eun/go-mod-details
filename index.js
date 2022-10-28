@@ -6,7 +6,8 @@ if (modfile === null || modfile.length == 0) {
     modfile = "go.mod";
 }
 
-const contents = fs.readFileSync(modfile).toString().split("\n");
+const contents = fs.readFileSync(modfile).toString().replace(/\r/g, "").split("\n");
+
 core.setOutput("modfile", modfile);
 
 const moduleRe = /^module\s+([\w\/\-\.]+)$/g
@@ -29,6 +30,3 @@ for (const line of contents) {
     extractModule(line)
     extractGoVersion(line)
 }
-
-
-
