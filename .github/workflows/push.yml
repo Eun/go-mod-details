@@ -22,7 +22,7 @@ jobs:
       -
         name: Test Version
         shell: bash
-        run:
+        run: |
           if [[ "${{ steps.go-mod-details.outputs.go_version }}" != "1.19" ]]; then
             echo "expected `1.19', but got `${{ steps.go-mod-details.outputs.go_version }}'"
             exit 1
