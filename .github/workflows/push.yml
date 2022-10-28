@@ -31,10 +31,10 @@ jobs:
         name: Test Module
         shell: bash
         run: |
-        if [[ "${{ steps.go-mod-details.outputs.module }}" != "main" ]]; then
-        echo "expected `main', but got `${{ steps.go-mod-details.outputs.module }}'"
-        exit 1
-        fi
+          if [[ "${{ steps.go-mod-details.outputs.module }}" != "main" ]]; then
+            echo "expected `main', but got `${{ steps.go-mod-details.outputs.module }}'"
+            exit 1
+          fi
 
   # use nancy to scan for vulnerabilities.
   vulnerability_scanner:
