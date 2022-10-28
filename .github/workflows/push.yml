@@ -4,6 +4,30 @@ on:
 
 name: "push"
 jobs:
+  test:
+    strategy:
+      matrix:
+        platform: [ubuntu-latest, macos-latest, windows-latest]
+      runs-on: ${{ matrix.platform }}
+    steps:
+      -
+        name: Checkout code
+        uses: actions/checkout@v2.4.0
+      -
+        name: Get Details
+        uses: ${{ github.workspace }}
+        id: go-mod-details
+        with:
+          modfile: ${{ github.workspace }}/.github/go.mod
+      -
+        name: Test Version
+        shell: bash
+        run:
+          if [[ "${{ steps.go-mod-details.outputs.go_version }}" != "1.19" ]]; then
+            echo "expected `1.19', but got `${{ steps.go-mod-details.outputs.go_version }}'"
+            exit 1
+          fi
+
   # use nancy to scan for vulnerabilities.
   vulnerability_scanner:
     name: Vulnerability scanner
